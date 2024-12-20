@@ -20,29 +20,9 @@ class CustomButton extends StatelessWidget {
         child: Text(text),
       );
 }
-class CustomAlertDialog extends StatelessWidget {
-  final String title, message, positiveText, negativeText;
-  final VoidCallback onPositive, onNegative;
-  const CustomAlertDialog({
-    required this.title,
-    required this.message,
-    required this.positiveText,
-    required this.negativeText,
-    required this.onPositive,
-    required this.onNegative,
-    super.key,
-  });
-  @override
-  Widget build(BuildContext context) => AlertDialog(
-        title: Text(title),
-        content: Text(message),
-        actions: [
-          CustomButton(text: negativeText, onPressed: onNegative),
-          CustomButton(text: positiveText, onPressed: onPositive),
-        ],
-      );
+void main() {   
+  runApp(MyApp()); 
 }
-void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
